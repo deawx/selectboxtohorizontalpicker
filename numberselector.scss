@@ -1,0 +1,64 @@
+.numberselector {
+		display: block;
+		margin-top: 10px;
+		display: table;
+		width: 100%;
+
+		.numbersrow {
+			display: table-row;
+		}
+
+		span {
+		    border: 1px solid #d8d8d8;
+		    color: white;
+		    font-size: 20px;
+		    padding: 1px 16px;
+		    margin-left: -1px;
+		    background: white;
+		    color: #3c3c3c;
+		    line-height: $quotebox-fields-height-quote - 4;
+		    cursor: pointer;
+		    display: table-cell;
+		    text-align:center;
+
+		    &.selected {
+		    	color: #ffffff;
+		    	z-index: 1;
+		    	position: relative;
+
+		    	&:before {
+		    		position: absolute;
+		    		z-index: -1;
+			    	background: #2B53A7;
+			    	left: -2px;
+			    	top: -2px;
+			    	right: -2px;
+			    	bottom: -2px;
+			    	content: ' ';
+			    }
+
+		    	&:after {
+		    		position: absolute;
+					left: calc(50% - 7px);
+					bottom: -10px;
+			    	content: ' ';
+					width: 0; 
+					height: 0; 
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-bottom: 7px solid #2B53A7;
+			    }
+		    }
+
+		    &.oldselection{
+		    	background: #717171;
+		    	color: #fff;
+		    }
+
+		    @media (max-width: $screen-sm + 1) {
+		    	font-size: 13px;
+		    	padding: 1px 12px;
+
+		    }
+		}		
+	}
