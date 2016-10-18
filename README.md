@@ -17,5 +17,9 @@ $(function() {
    $("#selectid").numberselector();
 });
 ```
+OUTPUT
+_______
+![Output Image](https://raw.githubusercontent.com/sagarchand/selectboxtohorizontalpicker/master/sample-output.jpg "Output Image")
+
 
 You can alter the styles using CSS.
